@@ -38,7 +38,7 @@ class FirstPage extends StatelessWidget {
                       style: TextStyle(
                         color: Color(0xffE4DCD9).withOpacity(0.1),
                         fontSize: 200,
-                        fontFamily: 'neoneon',
+                        fontFamily: 'neon',
                       ),
                       textAlign: TextAlign.start,
                     ),
