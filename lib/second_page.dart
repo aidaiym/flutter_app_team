@@ -55,7 +55,7 @@ class _MenuPageState extends State<MenuPage> {
       body: Column(
         children: [
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -155,13 +155,13 @@ class _MenuPageState extends State<MenuPage> {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.only( left: 30.0),
                   child: Container(
                     child: Text(
                       'F',
                       style: TextStyle(
                         color: Color(0xffE4DCD9).withOpacity(0.1),
-                        fontSize: 110,
+                        fontSize: 90,
                         fontFamily: 'neon',
                       ),
                       textAlign: TextAlign.start,
