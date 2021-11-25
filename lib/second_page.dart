@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/first_page.dart';
 import 'package:flutter_app/list_view_constructor.dart';
+import 'package:flutter_app/pages/AppBar.dart';
+import 'package:flutter_app/pages/center.dart';
+import 'package:flutter_app/pages/column.dart';
+import 'package:flutter_app/pages/container.dart';
+import 'package:flutter_app/pages/expanded.dart';
+import 'package:flutter_app/pages/material_app_page.dart';
+import 'package:flutter_app/pages/padding.dart';
+import 'package:flutter_app/pages/row.dart';
+import 'package:flutter_app/pages/scaffold.dart';
+import 'package:flutter_app/pages/text.dart';
 
 class MenuPage extends StatefulWidget {
   MenuPage({Key key}) : super(key: key);
@@ -70,83 +80,45 @@ class _MenuPageState extends State<MenuPage> {
                   children: <Widget>[
                     ListViews(
                       listTitleText: 'MaterialApp',
-                      listNavigation: null,
+                      listNavigation:  (context) => MaterialAppPage(),
                     ),
                     ListViews(
                       listTitleText: 'Scaffold',
-                      listNavigation: null,
+                      listNavigation: (context) => ScaffoldPage(),
                     ),
                     ListViews(
-                      listTitleText: 'AppBar, Body, NavBar',
-                      listNavigation: null,
+                      listTitleText: 'AppBar',
+                      listNavigation: (context) =>AppBarPage(),
                     ),
                     ListViews(
                       listTitleText: 'Column',
-                      listNavigation: null,
+                      listNavigation: (context) =>ColumnPage(),
                     ),
                     ListViews(
                       listTitleText: 'Row',
-                      listNavigation: null,
+                      listNavigation: (context) =>RowPage(),
                     ),
                     ListViews(
                       listTitleText: 'Center',
-                      listNavigation: null,
+                      listNavigation: (context) =>CenterPage(),
                     ),
                     ListViews(
-                      listTitleText: 'Conteiner',
-                      listNavigation: null,
+                      listTitleText: 'Container',
+                      listNavigation: (context) =>ContainerPage(),
                     ),
                     ListViews(
                       listTitleText: 'Expanded',
-                      listNavigation: null,
+                      listNavigation: (context) =>ExpandedPage(),
                     ),
                     ListViews(
                       listTitleText: 'Padding',
-                      listNavigation: null,
+                      listNavigation: (context) =>PaddingPage(),
                     ),
                     ListViews(
                       listTitleText: 'Text',
-                      listNavigation: null,
+                      listNavigation: (context) =>TextPage(),
                     ),
                   ],
-                  //   itemCount: 5,
-                  //   itemBuilder: (context, index) {
-                  //     return Container(
-                  //       height: 80,
-                  //       child: Card(
-                  //         elevation: 9,
-                  //         shape: RoundedRectangleBorder(
-                  //           borderRadius: BorderRadius.all(Radius.circular(30)),
-                  //         ),
-                  //         child: ListTile(
-                  //           dense: false,
-                  //           leading: Image.asset(
-                  //             'assets/images/flutter.png',
-                  //             width: 30,
-                  //             height: 30,
-                  //           ),
-                  //           title: Text(
-                  //             'App Bar',
-                  //             style: TextStyle(fontSize: 20, fontFamily: "Montserrat"),
-                  //           ),
-                  //           trailing: Wrap(
-                  //             spacing: 12, // space between two icons
-                  //             children: <Widget>[
-                  //               Icon(
-                  //                 Icons.favorite_border,
-                  //                 size: 30,
-                  //               ), // icon-1
-                  //               Icon(
-                  //                 Icons.keyboard_arrow_right_sharp,
-                  //                 size: 40,
-                  //               ), // icon-2
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       ),
-                  //     );
-                  //   },
-                  // ),
                 ),
               ),
             ),
