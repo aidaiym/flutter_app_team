@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/main_constructor.dart';
 
-class AppBarPage extends StatelessWidget {
+class AppBarPage extends StatefulWidget {
   const AppBarPage({Key key}) : super(key: key);
 
+  @override
+  State<AppBarPage> createState() => _AppBarPageState();
+}
+
+class _AppBarPageState extends State<AppBarPage> {
   @override
   Widget build(BuildContext context) {
     return MainConstructor(

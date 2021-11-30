@@ -1,9 +1,22 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class FirstPage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:flutter_app/second_page.dart';
+
+class FirstPage extends StatefulWidget {
   const FirstPage({Key key}) : super(key: key);
 
   @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  @override
+  void initState() {
+    super.initState();
+    startTime();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff20232A),
@@ -50,5 +63,15 @@ class FirstPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  startTime() async {
+    var duration = new Duration(seconds: 5);
+    return new Timer(duration, route);
+  }
+
+  route() {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => MenuPage()));
   }
 }
